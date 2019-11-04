@@ -1,0 +1,21 @@
+## JavaScript数据结构和算法的简单介绍
+
+1. 栈：Stack.js
+2. 队列：Queue.js
+    - 优先队列
+    - 循环队列
+3. 单链表：LinkedList.js
+4. 双链表：DoublyLinkedList.js
+5. 循环链表：CircularLinkedList.js
+6. 集合：CustomSet.js
+    - 交集
+    - 并集
+    - 差集
+    - 子集
+7. 字典：Dictionary.js
+8. 表：HashMap.js
+    - 散列表
+9. 二叉树：BinarySearchTree.js
+    - 平衡二叉树
+10. 排序算法：ArrayList.js
+    - 冒泡/选择/插入/归并/快排/堆排序
