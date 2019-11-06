@@ -70,6 +70,23 @@ const quick = (array, left, right) => {
 	}
 };
 
+const heapify = (array, heapSize, i) => {
+	let left = i * 2 + 1,
+		right = i * 2 + 2,
+		largest = i;
+	if (left < heapSize && array[left] > array[largest]) {
+		largest = left;
+	}
+	
+	if (right < heapSize && array[right] > array[largest]) {
+		largest = right;
+	}
+	if (largest !== i) {
+		[array[largest], array[i]] = [array[i], array[largest]];
+		heapify(array, heapSize, largest);
+	}
+};
+
 class ArrayList {
 	constructor() {
 		this.array = [];
@@ -165,6 +182,58 @@ class ArrayList {
 		console.timeEnd("quickSort");
 	}
 	
+	// 堆排序
+	// 将数组当作二叉树处理
+	heapSort() {
+		const {size, array} = this;
+		for (let i = Math.floor(size / 2); i >= 0; i--) {
+			heapify(array, size, i);
+		}
+		return;
+		let heapSize = size;
+		while (heapSize > 1) {
+			heapSize--;
+			this.swap(0, heapSize);
+			heapify(array, heapSize, 0);
+			
+		}
+	}
+	
+	// 顺序搜索
+	sequentialSearch(item) {
+		const {array, size} = this;
+		for (let i = 0; i < size; i++) {
+			if (array[i] === item) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	// 二分搜索
+	// 要求被搜索的数据结构已经排序
+	// 类似猜价格，高了降低，低了提高
+	binarySearch(item) {
+		this.quickSort();
+		const {size, array} = this;
+		let low = 0,
+			high = size - 1,
+			mid,
+			element;
+		
+		while (low <= high) {
+			mid = Math.floor((low + high) / 2);
+			element = array[mid];
+			if (element < item) {
+				low = mid + 1;
+			} else if (element > item) {
+				high = mid - 1;
+			} else {
+				return mid;
+			}
+		}
+	}
+	
 	get size() {
 		return this.array.length;
 	}
@@ -187,6 +256,9 @@ console.log(arrayList.toString());
 // arrayList.selectionSort();
 // arrayList.insertionSort();
 // arrayList.mergeSort();
-arrayList.quickSort();
+// arrayList.quickSort();
+// arrayList.heapSort();
+
+console.log("index", arrayList.binarySearch(4));
 
 console.log(arrayList.toString());
