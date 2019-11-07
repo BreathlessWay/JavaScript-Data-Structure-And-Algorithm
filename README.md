@@ -19,3 +19,8 @@
     - 平衡二叉树
 10. 排序算法：ArrayList.js
     - 冒泡/选择/插入/归并/快排/堆排序
+11. 递归: 
+    - 斐波那契数列: fibonacci.js
+12. 动态规划:
+    - 最少硬币找零: MinCoinChange.js
+    - 背包问题: knapSack.js
