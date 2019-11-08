@@ -1,4 +1,4 @@
-class MinCoinChange {
+class DpMinCoinChange {
 	constructor(icons) {
 		this.icons = icons;
 		this.cache = {};
@@ -35,6 +35,6 @@ class MinCoinChange {
 	}
 }
 
-const minCoinChange = new MinCoinChange([1, 5, 10, 25]);
+const dpMinCoinChange = new DpMinCoinChange([1, 5, 10, 25]);
 
-console.log(minCoinChange.makeChange(36));
+console.log(dpMinCoinChange.makeChange(36));

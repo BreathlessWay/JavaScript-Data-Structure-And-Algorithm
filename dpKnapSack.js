@@ -19,7 +19,7 @@ const findValues = (n, capacity, kS, weights, values) => {
 	values: array(number)=>物品价值
 	n: number=>物品数量
  */
-const knapSack = (capacity, weights, values, n) => {
+const dpKnapSack = (capacity, weights, values, n) => {
 	let i, w, a, b, kS = [];
 	
 	for (i = 0; i <= n; i++) {
@@ -62,21 +62,21 @@ const knapSack = (capacity, weights, values, n) => {
 
 const capacity = 5, weights = [2, 3, 4], values = [3, 4, 5], n = weights.length;
 
-// console.log(knapSack(capacity, weights, values, n));
+// console.log(dpKnapSack(capacity, weights, values, n));
 
-const reCallKnapSack = (capacity, weights, values, n) => {
+const reCallDpKnapSack = (capacity, weights, values, n) => {
 	if (capacity === 0 || n === 0) {
 		return 0;
 	}
 	
 	if (weights[n - 1] > capacity) {
-		return reCallKnapSack(capacity, weights, values, n - 1);
+		return reCallDpKnapSack(capacity, weights, values, n - 1);
 	}
 	// reCallKnapSack(capacity - weights[n - 1], weights, values, n - 1)：用于获取出去当前重量所装载的重量的最优值
-	const a = values[n - 1] + reCallKnapSack(capacity - weights[n - 1], weights, values, n - 1);
+	const a = values[n - 1] + reCallDpKnapSack(capacity - weights[n - 1], weights, values, n - 1);
 	// 获取同承重下前一次的value
-	const b = reCallKnapSack(capacity, weights, values, n - 1);
+	const b = reCallDpKnapSack(capacity, weights, values, n - 1);
 	return Math.max(a, b);
 };
 
-console.log(reCallKnapSack(capacity, weights, values, n));
+console.log(reCallDpKnapSack(capacity, weights, values, n));
