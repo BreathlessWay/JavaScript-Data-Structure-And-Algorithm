@@ -21,7 +21,10 @@
     - 冒泡/选择/插入/归并/快排/堆排序
 11. 递归: 
     - 斐波那契数列: fibonacci.js
-12. 动态规划:
+12. 动态规划(Dynamic Programming, DP):
     - 最少硬币找零: DpMinCoinChange.js
-    - 背包问题: dpKnapSack.js
+    - 0-1背包问题: dpKnapSack.js
     - 最长公共子序列: dpLcs.js
+13. 贪心算法(Greedy Algorithm):
+    - 最少硬币找零: GaMinCoinChange.js
+    - 分数背包问题: gaKnapSack.js
