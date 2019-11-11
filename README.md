@@ -1,5 +1,9 @@
 ## JavaScript数据结构和算法的简单介绍
 
+> 学习JavaScript数据结构与算法(第2版)
+````
+Learning JavaScript Data Structures and Algorithms
+
 1. 栈：Stack.js
 2. 队列：Queue.js
     - 优先队列
@@ -28,3 +32,12 @@
 13. 贪心算法(Greedy Algorithm):
     - 最少硬币找零: GaMinCoinChange.js
     - 分数背包问题: gaKnapSack.js
+````
+
+> 数据结构和算法JavaScript描述
+
+````
+Data Structures & Algorithms with JavaScript
+
+1. 数组
+````
