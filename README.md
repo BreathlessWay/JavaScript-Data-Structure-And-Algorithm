@@ -1,5 +1,7 @@
 ## JavaScript数据结构和算法的简单介绍
 
+**_这两本书没有最烂，只有更烂，一堆错误_**
+
 > 学习JavaScript数据结构与算法(第2版)
 ````
 Learning JavaScript Data Structures and Algorithms
@@ -39,5 +41,5 @@ Learning JavaScript Data Structures and Algorithms
 ````
 Data Structures & Algorithms with JavaScript
 
-1. 数组
+1. 列表 List.js
 ````
