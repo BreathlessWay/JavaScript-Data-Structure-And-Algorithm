@@ -38,8 +38,4 @@ Learning JavaScript Data Structures and Algorithms
 
 > 数据结构和算法JavaScript描述
 
-````
-Data Structures & Algorithms with JavaScript
-
-1. 列表 List.js
-````
+**_这本书烂的看不下去，不看了_**
