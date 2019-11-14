@@ -38,4 +38,8 @@ Learning JavaScript Data Structures and Algorithms
 
 > 数据结构和算法JavaScript描述
 
-**_这本书烂的看不下去，不看了_**
+````
+Data Structures & Algorithms with JavaScript
+
+1. 栈 Stack.js
+````
