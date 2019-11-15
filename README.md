@@ -43,8 +43,9 @@ Data Structures & Algorithms with JavaScript
 
 1. 栈 Stack.js
 2. 队列 Queue.js
-1. 链表：
+3. 链表：
     - 单向链表 LList.js
     - 双向链表 DoublyLList.js
     - 循环链表 CircularLList.js
+4. 字典 Dictionary.js
 ````

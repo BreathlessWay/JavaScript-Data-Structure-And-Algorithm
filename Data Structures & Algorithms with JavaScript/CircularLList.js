@@ -82,6 +82,7 @@ class CircularLList {
 			if (this.length === 1) {
 				this.head = null;
 			} else {
+				// 第一个元素需要单独处理！！！
 				if (this.head === itemNode.next) {
 					this.head = itemNode.next.next
 					itemNode.next = this.head;
