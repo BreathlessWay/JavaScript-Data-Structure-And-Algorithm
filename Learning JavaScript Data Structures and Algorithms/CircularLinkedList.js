@@ -99,15 +99,20 @@ class CircularLinkedList {
 		return -1;
 	}
 	
-	toString() {
-		let current = this[_head],
-			string = "";
-		while (current) {
-			string += current.element + (current.next ? "-" : "");
-			current = current.next;
-		}
-		return string;
-	}
+	
+    toString() {
+        let str = '',
+            current = this.head,
+            index = 0
+
+        while (index < this.length) {
+            str += (current?.element + ',')
+            current = current?.next
+            index++
+        }
+        console.log(str);
+        return str
+    }
 	
 	print() {
 		if (!this.isEmpty) {
